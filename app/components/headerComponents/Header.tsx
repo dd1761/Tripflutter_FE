@@ -1,4 +1,4 @@
-import style from "../../styles/mainLayout.module.css";
+import style from "../../styles/headerFooter.module.css";
 
 const Header: React.FC = () => {
   return (
