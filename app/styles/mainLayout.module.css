@@ -1,0 +1,14 @@
+.childrenContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 60px;
+  width: calc(100% - 120px);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
