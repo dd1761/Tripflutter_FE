@@ -1,0 +1,46 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0px 20px;
+  width: calc(100% - 40px);
+  height: 80px;
+
+  /* 
+    작성자 : 정승민
+    작성일: 2024.06.07
+    설명 : 임시 로그인 및 회원가입 컨테이너
+  */
+
+  .tmpMyPageContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & > p:hover {
+      cursor: pointer;
+    }
+  }
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & > p {
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+
+  /* 작성자 : 정승민
+작성일 : 2024.06.07
+설명 : 임시 로고에 대한 스타일 */
+  .tmpLogo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #b9b7b7;
+  }
+}
