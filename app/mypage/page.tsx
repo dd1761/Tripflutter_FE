@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import style from "../styles/myPage.module.css";
 import Link from "next/link";
 
@@ -178,5 +177,3 @@ const MyPageMain: React.FC = () => {
 };
 
 export default MyPageMain;
-=======
->>>>>>> Stashed changes
