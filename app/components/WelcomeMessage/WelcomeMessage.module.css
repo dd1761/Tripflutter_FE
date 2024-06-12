@@ -1,0 +1,19 @@
+.container {
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+}
+
+.heading {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.5em;
+    color: #333;
+    max-width: 100%;
+    line-height: 1.5;
+}
