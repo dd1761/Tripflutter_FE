@@ -1,0 +1,74 @@
+.Trip_detail_Container {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .Trip_detail_corseTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .Trip_detail_corse_SubTitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .Trip_detail_buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .Day_button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .googleMap {
+    height: 300px;
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+  }
+  
+  .LocationList {
+    margin-top: 20px;
+  }
+  
+  .LocationItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .LocationNumber {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .LocationDetails {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .LocationName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .LocationInfo {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .LocationTime {
+    font-size: 14px;
+    color: #666;
+  }
+  

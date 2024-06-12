@@ -2,10 +2,17 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
+<<<<<<< Updated upstream
 import styles from "../styles/trip-detail.module.css";
 
 const GoogleMapComponent = dynamic(
   () => import("../components/GoogleMapComponent"),
+=======
+import styles from "../components/TripDetails/TripDetails.module.css";
+
+const GoogleMapComponent = dynamic(
+  () => import("../components/GoogleMap/GoogleMapComponent"),
+>>>>>>> Stashed changes
   {
     ssr: false,
   }
@@ -215,7 +222,11 @@ const Trip_Detail: React.FC = () => {
       </div>
       <div className={styles.googleMap}>
         <GoogleMapComponent
+<<<<<<< Updated upstream
           mapContainerStyle={mapContainerStyle}
+=======
+          // mapContainerStyle={mapContainerStyle}
+>>>>>>> Stashed changes
           center={center}
           locations={locations}
         />
