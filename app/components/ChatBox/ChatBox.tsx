@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./ChatBox.module.css";
+import Link from "next/link";
 
 interface Message {
   user: string;
@@ -105,7 +106,9 @@ const ChatBox: React.FC = () => {
           ))}
           <div ref={messageEndRef} />
           <div>
-            <button className={styles.buttonStyle}>일정 상세히 보기</button>
+            <Link href={"/trip-detail"}>
+              <button className={styles.buttonStyle}>일정 상세히 보기</button>
+            </Link>
             <button className={styles.buttonStyle}>일정 저장하기</button>
             <button className={styles.buttonStyle}>일정 다시 생성하기</button>
           </div>

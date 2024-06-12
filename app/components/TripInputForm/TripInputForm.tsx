@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./TripInputForm.module.css";
+import Link from "next/link";
 
 interface TripInputFormProps {
   onSubmit: (formData: any) => void;
@@ -172,7 +173,10 @@ const TripInputForm: React.FC<TripInputFormProps> = ({ onSubmit }) => {
         className={styles.input}
       />
 
-      <button type="submit" className={styles.submitButton}>여행 생성하기</button>
+      <Link href={"/trip-planning/chatbox"}>
+        <button type="submit" className={styles.submitButton}>여행 생성하기</button>
+      </Link>
+
     </form>
   );
 };
