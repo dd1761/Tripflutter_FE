@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import WelcomeMessage from "../components/WelcomeMessage/WelcomeMessage";
 import TripInputForm from "../components/TripInputForm/TripInputForm";
