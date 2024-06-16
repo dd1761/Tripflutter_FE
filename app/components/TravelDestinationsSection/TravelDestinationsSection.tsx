@@ -90,7 +90,7 @@ const TravelDestinationsSection: React.FC = () => {
                     {destination.oldPrice && <span>특가</span>}
                   </div>
                   <Link href="destination.html">
-                    <img src={destination.image} className="img-fluid" alt="Colorlib Template" />
+                    <img src={destination.image} className="img-fluid" alt="Destination Image" />
                   </Link>
                 </div>
                 <div className="text">

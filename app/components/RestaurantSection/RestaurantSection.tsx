@@ -17,7 +17,7 @@ export const restaurantsData: Restaurant[] = [
   {
     id: 1,
     imageUrl: '/images/resto-1.jpg',
-    altText: 'Colorlib Template',
+    altText: 'Restaurant Image',
     price: '1만원',
     location: '베른, 스위스',
     name: '레스토 바',
@@ -28,7 +28,7 @@ export const restaurantsData: Restaurant[] = [
   {
     id: 2,
     imageUrl: '/images/resto-2.jpg',
-    altText: 'Colorlib Template',
+    altText: 'Restaurant Image',
     price: '2만원',
     location: '베른, 스위스',
     name: '레스토 바',
@@ -39,7 +39,7 @@ export const restaurantsData: Restaurant[] = [
   {
     id: 3,
     imageUrl: '/images/resto-3.jpg',
-    altText: 'Colorlib Template',
+    altText: 'Restaurant Image',
     price: '3만원',
     location: '베른, 스위스',
     name: '레스토 바',

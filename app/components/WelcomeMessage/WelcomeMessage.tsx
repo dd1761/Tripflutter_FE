@@ -7,13 +7,15 @@ import Link from "next/link";
 
 const WelcomeMessage: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>TripFlutter에 오신 것을 환영합니다</h1>
-      <p className={styles.description}>AI 기반 어시스턴트와 함께 완벽한 여행을 간편하게 계획하고 소통하세요</p>
-      <Link href={"/trip-planning"}>
-        <CreateTripButton />
-      </Link>
-    </div>
+    <section>
+      <div className={styles.container}>
+        <span className={styles.heading}>당신을 위한 여행 계획 사이트</span>
+        <h1 className={styles.subheading}>트리플러터에서 쉽고 빠르게 여행 계획을 세워보세요.</h1>
+        <p className={styles.description}>지금 바로 당신의 여행을 시작하세요.</p>
+        <Link href={"/trip-planning"}> <CreateTripButton />
+        </Link>
+      </div>
+    </section>
   );
 };
 

@@ -30,8 +30,8 @@ const testimonials: Testimonial[] = [
 
 const TestimonialSection: React.FC = () => (
   <section className="ftco-section testimony-section">
-    <img src="images/blob-shape-2.svg" className="svg-blob" alt="Colorlib Free Template" />
-    <img src="images/blob-shape-2.svg" className="svg-blob-2" alt="Colorlib Free Template" />
+    <img src="images/blob-shape-2.svg" className="svg-blob" alt="Person Image" />
+    <img src="images/blob-shape-2.svg" className="svg-blob-2" alt="Person Image" />
     <div className="container">
       <div className="row justify-content-center pb-3">
         <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
