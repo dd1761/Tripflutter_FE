@@ -12,10 +12,14 @@
     "@react-google-maps/api": "^2.19.3",
     "@types/google.maps": "^3.55.9",
     "axios": "^1.7.2",
+    "bootstrap": "^4.6.2",
     "google-maps": "^4.3.3",
+    "jquery": "^3.7.1",
     "next": "14.2.3",
+    "popper.js": "^1.16.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.5"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
