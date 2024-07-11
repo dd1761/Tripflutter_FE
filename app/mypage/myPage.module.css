@@ -31,8 +31,12 @@
 .circle {
   width: 150px;
   height: 150px;
-  background-color: #000;
   border-radius: 50%;
+
+  & > img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
 }
 
 .userName {
@@ -75,4 +79,35 @@
   margin: 10px 0px 10px 20px;
   font-weight: 100;
   color: #a7a3a3;
+
+  & > a {
+    text-decoration: none;
+    color: #a7a3a3;
+  }
+
+  & > a:visited {
+    color: #a7a3a3;
+  }
+
+  & > a:hover {
+    color: #4496ca;
+  }
+}
+
+.menuList_active {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 10px 0px 10px 20px;
+  font-weight: 700;
+  color: #000;
+
+  & > a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  & > a:visited {
+    color: #000;
+  }
 }

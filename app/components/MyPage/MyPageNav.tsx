@@ -1,5 +1,8 @@
 "use client";
+import { useState } from "react";
 import style from "../../mypage/myPage.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const MENU_LIST = [
   {
@@ -9,12 +12,12 @@ const MENU_LIST = [
       {
         id: "a1",
         title: "최근에 생성한 여정",
-        link: "/",
+        link: "/mypage/recentTrip",
       },
       {
         id: "a2",
         title: "지나간 여정 (전체 여정)",
-        link: "/",
+        link: "/mypage/myTrip",
       },
     ],
   },
@@ -25,12 +28,12 @@ const MENU_LIST = [
       {
         id: "b1",
         title: "전체 여행 기록",
-        link: "/",
+        link: "/mypage/",
       },
       {
         id: "b2",
         title: "전체 여행지 / 식당 리뷰",
-        link: "/",
+        link: "/mypage/myReviews",
       },
     ],
   },
@@ -41,12 +44,12 @@ const MENU_LIST = [
       {
         id: "c1",
         title: "전체 친구 목록",
-        link: "/",
+        link: "/mypage/friends",
       },
       {
         id: "c2",
         title: "친구 추가 / 삭제",
-        link: "/",
+        link: "/mypage/friends",
       },
     ],
   },
@@ -57,27 +60,36 @@ const MENU_LIST = [
       {
         id: "d1",
         title: "계정 설정",
-        link: "/",
+        link: "/mypage/settings/account",
       },
       {
         id: "d2",
         title: "알림 설정",
-        link: "/",
+        link: "/mypage/settings/notifications",
       },
       {
         id: "d3",
         title: "프로필 변경",
-        link: "/",
+        link: "/mypage/settings/profile",
       },
     ],
   },
 ];
 
 const MyPageNav: React.FC = () => {
+  const [activeMenu, setActiveMenu] = useState<string>("a1");
+
   return (
     <div className={style.navContainer}>
       <div className={style.profileContainer}>
-        <div className={style.circle} />
+        <div className={style.circle}>
+          <Image
+            src={"/images/person_1.jpg"}
+            width={150}
+            height={150}
+            alt={"profile image"}
+          />
+        </div>
         <p className={style.userName}>김여행</p>
       </div>
 
@@ -89,8 +101,22 @@ const MyPageNav: React.FC = () => {
               <div className={style.menuLine} />
               {menu.menuList.map((eachMenu, index) => {
                 return (
-                  <li className={style.menuList} key={index}>
-                    {eachMenu.title}
+                  <li
+                    className={
+                      activeMenu === eachMenu.id
+                        ? style.menuList_active
+                        : style.menuList
+                    }
+                    key={index}
+                  >
+                    <Link
+                      href={eachMenu.link}
+                      onClick={() => {
+                        setActiveMenu(eachMenu.id);
+                      }}
+                    >
+                      {eachMenu.title}
+                    </Link>
                   </li>
                 );
               })}
