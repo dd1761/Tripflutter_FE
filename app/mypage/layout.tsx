@@ -10,7 +10,7 @@ const MyPageLayout = ({ children }: Props) => {
   return (
     <div className={style.myPageContainer}>
       <MyPageNav />
-      <div>{children}</div>
+      <div className={style.childrenContainer}>{children}</div>
     </div>
   );
 };

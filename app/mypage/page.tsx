@@ -15,6 +15,10 @@ const MyPageMain: React.FC = () => {
         <p className={style.topic}>여정 관리</p>
         <p className={style.title}>최근에 생성한 여정</p>
       </div>
+
+      <div className={style.myPageContents}>
+        <h1>최근 생성한 여정 페이지</h1>
+      </div>
     </div>
   );
 };

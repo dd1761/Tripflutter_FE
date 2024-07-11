@@ -1,15 +1,16 @@
 /*Common Style*/
 .myPageContainer {
   display: flex;
-  align-items: center;
   gap: 40px;
   width: 1520px;
 }
 
 .myPageContentsContainer {
   display: flex;
-
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
+  min-height: 930px;
 }
 
 .myPageContentsTitle {
@@ -26,6 +27,14 @@
 .title {
   font-size: 1.5em;
   font-weight: 700;
+}
+
+.myPageContents {
+  width: 1210px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #b9b7b7;
 }
 
 /* myPageNav.tsx에서 사용되는 스타일*/
@@ -135,4 +144,7 @@
   }
 }
 
+.childrenContainer {
+  width: calc(1520px - 250px);
+}
 /*mypage/page.tsx*/
