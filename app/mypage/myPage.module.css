@@ -1,8 +1,31 @@
+/*Common Style*/
 .myPageContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 40px;
   width: 1520px;
+}
+
+.myPageContentsContainer {
+  display: flex;
+
+  width: 100%;
+}
+
+.myPageContentsTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topic {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 /* myPageNav.tsx에서 사용되는 스타일*/
@@ -111,3 +134,5 @@
     color: #000;
   }
 }
+
+/*mypage/page.tsx*/

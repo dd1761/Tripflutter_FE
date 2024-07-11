@@ -12,7 +12,7 @@ const MENU_LIST = [
       {
         id: "a1",
         title: "최근에 생성한 여정",
-        link: "/mypage/recentTrip",
+        link: "/mypage",
       },
       {
         id: "a2",
