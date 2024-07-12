@@ -147,4 +147,33 @@
 .childrenContainer {
   width: calc(1520px - 250px);
 }
+
 /*mypage/page.tsx*/
+.none_data_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+
+#none_data_title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #4496ca;
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  & > a:link {
+    color: #4496ca;
+  }
+
+  & > a:visited {
+    color: #4496ca;
+  }
+}
