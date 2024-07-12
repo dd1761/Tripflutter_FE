@@ -1,4 +1,5 @@
 import style from "../myPage.module.css";
+
 const MyTrip: React.FC = () => {
   return (
     <div className={style.myPageContentsContainer}>
@@ -7,9 +8,7 @@ const MyTrip: React.FC = () => {
         <p className={style.title}>지나간 여정(전체 여정)</p>
       </div>
 
-      <div className={style.myPageContents}>
-        <h1>전체 여정 페이지</h1>
-      </div>
+      <div className={style.myPageContents}></div>
     </div>
   );
 };
