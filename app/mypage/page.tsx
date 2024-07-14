@@ -3,6 +3,7 @@ import style from "./myPage.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import EmptyTripCard from "../components/MyPage/EmptyTripCard";
+import Datatable from "../components/\bCommon/Datatable";
 
 /**
  작성자 : 정승민
@@ -75,6 +76,7 @@ const MyPageMain: React.FC = () => {
                 linkMessage={"호텔 / 관광지 예약하기 >"}
                 link={"/trip-planning"}
               />
+              <Datatable />
             </div>
           </div>
         </div>
