@@ -1,0 +1,166 @@
+.container {
+  --container-width: 100%;
+  --max-container-width: 600px;
+  --font-size-base: 16px;
+  font-family: Arial, sans-serif;
+  width: var(--container-width);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  padding: calc(1.5 * var(--font-size-base));
+  font-size: var(--font-size-base);
+}
+
+@media (min-width: 768px) {
+  .container {
+    --font-size-base: 18px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(1.5 * var(--font-size-base));
+}
+
+.title {
+  font-size: calc(1.75 * var(--font-size-base));
+  font-weight: bold;
+}
+
+.myReservation {
+  font-size: calc(1 * var(--font-size-base));
+}
+
+.spotName {
+  font-size: calc(2 * var(--font-size-base));
+  margin-bottom: calc(1 * var(--font-size-base));
+}
+
+.spotInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: calc(1.25 * var(--font-size-base));
+}
+
+.category {
+  font-size: calc(1 * var(--font-size-base));
+  color: #666;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: calc(0.5 * var(--font-size-base));
+}
+
+.stars {
+  color: gold;
+  margin-right: calc(0.5 * var(--font-size-base));
+  font-size: calc(1.25 * var(--font-size-base));
+}
+
+.ratingCount, .likeCount {
+  font-size: calc(1 * var(--font-size-base));
+  margin-right: calc(1 * var(--font-size-base));
+  display: flex;
+  align-items: center;
+}
+
+.photographer {
+  font-size: calc(1 * var(--font-size-base));
+  color: #666;
+}
+
+.imageContainer {
+  position: relative;
+  margin-bottom: calc(1.25 * var(--font-size-base));
+  height: calc(20 * var(--font-size-base));
+  overflow: hidden;
+}
+
+.imageWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageCount {
+  position: absolute;
+  right: calc(1 * var(--font-size-base));
+  bottom: calc(1 * var(--font-size-base));
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: calc(0.25 * var(--font-size-base)) calc(0.5 * var(--font-size-base));
+  border-radius: calc(1 * var(--font-size-base));
+  font-size: calc(0.875 * var(--font-size-base));
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(1.25 * var(--font-size-base));
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  font-size: calc(1 * var(--font-size-base));
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: calc(0.5 * var(--font-size-base)) calc(0.75 * var(--font-size-base));
+}
+
+.actionButton i {
+  margin-right: calc(0.5 * var(--font-size-base));
+}
+
+.description {
+  font-size: calc(1.125 * var(--font-size-base));
+  line-height: 1.5;
+  margin-bottom: calc(1.25 * var(--font-size-base));
+}
+
+.reviewSection {
+  margin-bottom: calc(1.25 * var(--font-size-base));
+}
+
+.reviewTitle {
+  font-size: calc(1.25 * var(--font-size-base));
+  margin-bottom: calc(1 * var(--font-size-base));
+}
+
+.reviewItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: calc(1 * var(--font-size-base));
+}
+
+.reviewContent {
+  flex: 1;
+  margin-right: calc(1 * var(--font-size-base));
+}
+
+.reviewStars {
+  color: gold;
+  font-size: calc(1 * var(--font-size-base));
+  margin-bottom: calc(0.25 * var(--font-size-base));
+  display: block;
+}
+
+.reviewerName {
+  flex: 0 0 auto;
+  font-weight: bold;
+  font-size: calc(0.9 * var(--font-size-base));
+  color: #666;
+}

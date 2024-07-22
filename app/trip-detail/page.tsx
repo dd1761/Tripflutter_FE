@@ -261,11 +261,7 @@ const Trip_Detail: React.FC = () => {
 
     if (isDraggable) {
       return (
-        <Draggable
-          key={location.name}
-          draggableId={location.name}
-          index={index}
-        >
+        <Draggable key={location.id} draggableId={location.id} index={index}>
           {(provided, snapshot) => (
             <div
               ref={provided.innerRef}
@@ -283,7 +279,7 @@ const Trip_Detail: React.FC = () => {
     }
 
     return (
-      <div key={location.name} className={styles.LocationItem}>
+      <div key={location.id} className={styles.LocationItem}>
         {content}
       </div>
     );
