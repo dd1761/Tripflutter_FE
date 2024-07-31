@@ -1,6 +1,6 @@
 .container {
   --container-width: 100%;
-  --max-container-width: 600px;
+  --max-container-width: 800px;
   --font-size-base: 16px;
   font-family: Arial, sans-serif;
   width: var(--container-width);
@@ -112,12 +112,14 @@
 .actionButton {
   background: none;
   border: none;
+  border-radius: 10px;
   font-size: calc(1 * var(--font-size-base));
   color: #333;
   cursor: pointer;
-  display: flex;
+  display: grid;
   align-items: center;
   padding: calc(0.5 * var(--font-size-base)) calc(0.75 * var(--font-size-base));
+  justify-items: center;
 }
 
 .actionButton i {
@@ -164,3 +166,4 @@
   font-size: calc(0.9 * var(--font-size-base));
   color: #666;
 }
+
