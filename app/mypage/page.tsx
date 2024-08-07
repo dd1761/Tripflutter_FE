@@ -3,7 +3,7 @@ import style from "./myPage.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import EmptyTripCard from "../components/MyPage/EmptyTripCard";
-import Datatable from "../components/\bCommon/Datatable";
+import Datatable from "../components/Common/Datatable";
 
 /**
  작성자 : 정승민
