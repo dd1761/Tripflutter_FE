@@ -1,0 +1,269 @@
+/*Common Style*/
+.myPageContainer {
+  display: flex;
+  gap: 40px;
+  width: 1520px;
+}
+
+.myPageContentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  min-height: 930px;
+}
+
+.myPageContentsTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topic {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.myPage_contents_not_empty {
+  width: 1210px;
+  height: calc(930px - 65px);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #b9b7b7;
+}
+
+.myPageContents {
+  width: 1210px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #b9b7b7;
+}
+
+/* myPageNav.tsx에서 사용되는 스타일*/
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  padding: 40px 20px;
+  width: 250px;
+  height: 930px;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  & > img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.userName {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  width: 210px;
+}
+
+.eachMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.eachMenuTitle {
+  font-size: 1em;
+  font-weight: 700;
+  text-align: start;
+}
+
+.menuLine {
+  width: 210px;
+  height: 1px;
+  background-color: #b7b7b7;
+  margin: 10px 0px 10px 0px;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 10px 0px 10px 20px;
+  font-weight: 100;
+  color: #a7a3a3;
+
+  & > a {
+    text-decoration: none;
+    color: #a7a3a3;
+  }
+
+  & > a:visited {
+    color: #a7a3a3;
+  }
+
+  & > a:hover {
+    color: #4496ca;
+  }
+}
+
+.menuList_active {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 10px 0px 10px 20px;
+  font-weight: 700;
+  color: #000;
+
+  & > a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  & > a:visited {
+    color: #000;
+  }
+}
+
+.childrenContainer {
+  width: calc(1520px - 250px);
+}
+
+/*mypage/page.tsx*/
+.none_data_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+
+#none_data_title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #4496ca;
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  & > a:link {
+    color: #4496ca;
+  }
+
+  & > a:visited {
+    color: #4496ca;
+  }
+}
+
+.recentTrip {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.generateDate {
+  font-size: 0.8em;
+}
+
+.tripLocation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.locationAndDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.locationTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  & > span {
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0px;
+  }
+}
+
+.schedule {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.trip_banner_dummy {
+  width: 100%;
+  height: 250px;
+  background-color: #b7b7b7;
+  border-radius: 10px;
+}
+
+.friendsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.empty_data_banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #b9b7b7;
+
+  & > a {
+    color: #4496ca;
+    font-size: 0.8rem;
+    text-decoration: underline;
+  }
+
+  & > a:link {
+    color: #4496ca;
+    font-size: 0.8rem;
+  }
+
+  & > a:visited {
+    color: #4496ca;
+  }
+}
+
+.banner_message {
+  font-size: 1rem;
+  font-weight: 700;
+}

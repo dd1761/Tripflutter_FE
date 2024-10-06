@@ -1,177 +1,94 @@
-import style from "../styles/myPage.module.css";
+"use client";
+import style from "./myPage.module.css";
+import { useState } from "react";
 import Link from "next/link";
+import EmptyTripCard from "../components/MyPage/EmptyTripCard";
+import Datatable from "../components/Common/Datatable";
 
 /**
  작성자 : 정승민
- 작성일 : 2024.06.12
- TODO : 마이페이지 레이아웃 분리 예정
+ 작성일 : 2024.07.11
+ DESC : 마이페이지 메인은 최근 여정 관리를 기본으로 보여줍니다.
 */
 
-const MyPageMain: React.FC = () => {
+const EmptyDataBanner: React.FC<{
+  message: string;
+  link: string;
+  linkMessage: string;
+}> = ({ message, linkMessage, link }) => {
   return (
-    <div className={style.myPageContainer}>
-      <div className={style.myPageMenu}>
-        <div className={style.profileContainer}>
-          <div className={style.dummyProfileImage} />
-          <p>김여행</p>
-        </div>
-        {/* 작성자 : 정승민
-        작성일 : 2024. 06. 08
-        설명 : 각 메뉴에 대해서 별도의 컴포넌트로 분리하여 리스트 렌더링 고민중 */}
-        <div className={style.menuList}>
-          <div className={style.eachMenu}>
-            <p className={style.eachMenuTitle}>나의 여정 &gt;</p>
-            <div className={style.horizontalLineWhite} />
-            <ul className={style.eachMenuList}>
-              <Link href={"/mypage/recentTrip"}>
-                <li>최근 여정 관리</li>
-              </Link>
-              <Link href={"/mypage/reservation"}>
-                <li>나의 예약 관리</li>
-              </Link>
-              <Link href={"/mypage/allTrip"}>
-                <li>나의 전체 여정 관리</li>
-              </Link>
-              <Link href={"/mypage/reviews"}>
-                <li>나의 리뷰 관리</li>
-              </Link>
-            </ul>
-          </div>
+    <div className={style.empty_data_banner}>
+      <p className={style.banner_message}>{message}</p>
+      <Link href={link}>{linkMessage}</Link>
+    </div>
+  );
+};
 
-          <div className={style.eachMenu}>
-            <p className={style.eachMenuTitle}>나의 친구 &gt;</p>
-            <div className={style.horizontalLineWhite} />
-            <ul className={style.eachMenuList}>
-              <Link href={"/mypage/myFriends"}>
-                <li>친구 목록 / 관리</li>
-              </Link>
-            </ul>
-          </div>
+const MyPageMain: React.FC = () => {
+  // 여정 데이터 중 가장 최근에 생성된 데이터를 가져올 state.
+  const [recentData, setRecentData] = useState<any>(null);
 
-          <div className={style.eachMenu}>
-            <p className={style.eachMenuTitle}>나의 프로필 &gt;</p>
-            <div className={style.horizontalLineWhite} />
-            <ul className={style.eachMenuList}>
-              <Link href={"/mypage/setting/profile"}>
-                <li>프로필 관리</li>
-              </Link>
-            </ul>
-          </div>
-
-          <div className={style.eachMenu}>
-            <p className={style.eachMenuTitle}>개인정보 설정 &gt;</p>
-            <div className={style.horizontalLineWhite} />
-            <ul className={style.eachMenuList}>
-              <Link href={"/mypage/setting/account"}>
-                <li>계정 설정</li>
-              </Link>
-              <Link href={"/mypage/setting/notifications"}>
-                <li>알림 설정</li>
-              </Link>
-            </ul>
-          </div>
-        </div>
+  return (
+    <div className={style.myPageContentsContainer}>
+      <div className={style.myPageContentsTitle}>
+        <p className={style.topic}>여정 관리</p>
+        <p className={style.title}>최근에 생성한 여정</p>
       </div>
 
-      <div className={style.myPageContents}>
-        <div className={style.myPageContentsTitle}>
-          <p>최근 여정 관리</p>
-          <div className={style.horizontalLineBlack} />
+      {!recentData ? (
+        <div className={style.myPageContents}>
+          <EmptyTripCard />
         </div>
-
-        <div className={style.recentTripBanner}></div>
-
-        <div className={style.myPageContentsTitle}>
-          <p>여정의 예약 정보</p>
-          <div className={style.horizontalLineBlack} />
-        </div>
-
-        <div className={style.reservationInfoContainer}>
-          {/*항공권 예약 정보 */}
-          <div className={style.reservation}>
-            <div className={style.reservationSubject}>
-              <p>항공권</p>
-              <p>
-                <span>전체보기</span>
-              </p>
-            </div>
-            <div className={style.infoListContainer}>
-              <div className={style.eachReservationInfo}>
-                <div className={style.airlineLeft}>
-                  <p className={style.airlineName}>에어서울</p>
-                  <p className={style.airlineId}>OZ123</p>
-                </div>
-
-                <div className={style.airlineRight}>
-                  <p className={style.airlineName}>2024.06.12 - 07:30</p>
-                  <p className={style.airlineId}>인천국제공항(ICN) 1터미널</p>
-                </div>
+      ) : (
+        <div className={style.myPage_contents_not_empty}>
+          <div className={style.recentTrip}>
+            <p className={style.generateDate}>여정 생성일 : 2024.06.30</p>
+            <div className={style.tripLocation}>
+              <div className={style.locationAndDate}>
+                <p className={style.locationTitle}>
+                  도쿄 <span>Tokyo / 일본 (Japan)</span>
+                </p>
+                <p className={style.schedule}>
+                  2024. 07. 07 (일) ~ 2024. 07. 12 (금)
+                </p>
               </div>
-              <div className={style.eachReservationInfo}>
-                <div className={style.airlineLeft}>
-                  <p className={style.airlineName}>에어서울</p>
-                  <p className={style.airlineId}>OZ321</p>
-                </div>
 
-                <div className={style.airlineRight}>
-                  <p className={style.airlineName}>2024.06.13 - 13:30</p>
-                  <p className={style.airlineId}>나리타국제공항(NRT)</p>
-                </div>
+              <div className={style.trip_banner_dummy}>
+                <h3>여행지 배너 (미구현)</h3>
               </div>
             </div>
-          </div>
 
-          {/*숙박 예약 정보 */}
-          <div className={style.reservation}>
-            <div className={style.reservationSubject}>
-              <p>숙박</p>
-              <p>
-                <span>전체보기</span>
-              </p>
+            {/* 친구 목록*/}
+            <div className={style.friendsList}>
+              <p className={style.locationTitle}>함께 여행하는 친구</p>
+              <EmptyDataBanner
+                message={"아직 함께 여행하는 친구가 없습니다."}
+                linkMessage={"여정에 친구 초대하기 >"}
+                link={"/trip-planning"}
+              />
             </div>
 
-            <div className={style.infoListContainer}>
-              <div className={style.eachReservationInfo}>
-                <div className={style.airlineLeft}>
-                  <p className={style.airlineName}>도쿄도 신주쿠구</p>
-                  <p className={style.airlineId}>토요코인 호텔 신주쿠</p>
-                </div>
-
-                <div className={style.airlineRight}>
-                  <p className={style.airlineName}>
-                    2024. 06. 12 ~ 2024. 06. 13
-                  </p>
-                  <p className={style.airlineId}>금연실 / 2인</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*입장권 예약 정보 */}
-          <div className={style.reservation}>
-            <div className={style.reservationSubject}>
-              <p>입장권</p>
-              <p>
-                <span>전체보기</span>
-              </p>
-            </div>
-
-            <div className={style.infoListContainer}>
-              <div className={style.eachReservationInfo}>
-                <div className={style.airlineLeft}>
-                  <p className={style.airlineName}>도쿄타워</p>
-                  <p className={style.airlineId}>도쿄타워 입장권</p>
-                </div>
-
-                <div className={style.airlineRight}>
-                  <p className={style.airlineName}>2024. 06. 12</p>
-                  <p className={style.airlineId}>2인</p>
-                </div>
-              </div>
+            {/* 예약 정보 목록*/}
+            <div className={style.friendsList}>
+              <p className={style.locationTitle}>여정의 예약 정보</p>
+              <EmptyDataBanner
+                message={"여정의 예약 정보가 없습니다."}
+                linkMessage={"호텔 / 관광지 예약하기 >"}
+                link={"/trip-planning"}
+              />
+              <Datatable />
             </div>
           </div>
         </div>
-      </div>
+      )}
+
+      <button
+        onClick={() => {
+          setRecentData(!recentData);
+        }}
+      >
+        정보 유/무 변경 (테스트용 버튼)
+      </button>
     </div>
   );
 };
