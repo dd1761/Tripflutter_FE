@@ -1,0 +1,62 @@
+.container{
+    width: auto;
+    height: 600px;
+}
+
+.container {
+  width: 1300px;
+  height: 800px;
+  max-width: 1500px; /* 컨테이너 크기 증가 */
+  margin: 20px auto; /* 상하 여백 추가 */
+  padding: 30px; /* 패딩 증가 */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+
+.button_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button_submit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button_cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.starRating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.star {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
