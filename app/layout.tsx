@@ -5,8 +5,8 @@ import style from "../styles/mainLayout.module.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import {getServerSession} from "next-auth";
-import {authOptions} from "@/pages/api/[...nextauth]";
-import LoginBtn from "@/pages/LoginBtn";
+import {authOptions} from "@/app/pages/api/[...nextauth]";
+import LoginBtn from "@/app/pages/LoginBtn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children,}: Readonly<{  children: React.ReactNode;}>) {
+    // @ts-ignore
     await getServerSession(authOptions);
   return (
     <html lang="en">

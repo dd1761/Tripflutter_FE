@@ -1,4 +1,4 @@
-import { connectDB } from "../../utils/database";
+import { connectDB } from "../../../utils/database";
 import bcrypt from "bcrypt";
 
 export default async function handler(req, res) {
