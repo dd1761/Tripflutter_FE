@@ -1,5 +1,5 @@
-import { connectDB } from "../../../utils/database";
 import bcrypt from "bcrypt";
+import {connectDB} from "@/utils/database";
 
 export default async function handler(req, res) {
     if (req.method === "POST") {

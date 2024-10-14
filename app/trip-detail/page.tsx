@@ -246,7 +246,8 @@ const Trip_Detail: React.FC = () => {
   const renderLocationItem = (
     location: Location,
     index: number,
-    isDraggable: boolean = false
+    isDraggable: boolean = false,
+    id: string
   ) => {
     const content = (
       <>
@@ -325,7 +326,7 @@ const Trip_Detail: React.FC = () => {
                 className={styles.LocationList}
               >
                 {tripData[selectedDay].map((location, index) =>
-                  renderLocationItem(location, index, true)
+                  renderLocationItem(location, index, true, location.id)
                 )}
                 {provided.placeholder}
               </div>
@@ -335,7 +336,7 @@ const Trip_Detail: React.FC = () => {
       ) : (
         <div className={styles.LocationList}>
           {tripData[selectedDay].map((location, index) =>
-            renderLocationItem(location, index)
+            renderLocationItem(location, index, false, location.id)
           )}
         </div>
       )}
